@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Login Form Container */
+.login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    padding: 20px;
+    border: 1px solid rgb(228, 227, 227);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Header Styling */
+.login-form h3 {
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.login {
+    width: 310px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Forgot Password Link */
+.login-form form > p {
+    position: absolute;
+    right: 20px;
+    font-size: 14px;
+}
+
+/* Buttons Styling */
+#login-button,
+#google-button, #signup-button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#login-button, #signup-button {
+    background-color: #4285f4;
+    color: white;
+    margin: 35px 0 10px 0;
+}
+
+#login-button:hover {
+    background-color: #357ae8;
+}
+
+#google-button {
+    background-color: rgb(230, 231, 231);
+    color: black;
+    margin-top: 10px;
+}
+
+#google-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Hyperlink Styling */
+.login-form a {
+    text-decoration: none;
+    color: #4285f4;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}

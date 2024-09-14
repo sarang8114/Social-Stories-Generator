@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/CSS/main.css">
+    <link rel="stylesheet" href="../assets/CSS/login.css">
+</head>
+
+<body>
+    <div class="login-form">
+        <img src="../img/social-story-kid.png" alt="Web App Logo" class="logo">
+        <h3>Welcome Back!</h3>
+        <form onsubmit="return false;" class="login">
+            <label for="email-id">Email</label><br>
+            <input type="email" name="email" id="email-id"><br>
+            <label for="pwd">Password</label><br>
+            <input type="password" name="pwd" id="pwd">
+            <p><a href="" target="_blank">Forgot Password?</a></p>
+            <button type="button" id="login-button">Login</button>
+        </form>
+        <p>OR</p>
+        <button onclick="googleLogin()" type="button" id="google-button"><img src="../img/google-icon.png" alt="Google Logo"
+                id="google-logo">Continue with Google</button>
+    </div>
+
+    <script src="../assets/JS/login.js"></script>
+
+    <!-- Firebase App (the core Firebase SDK) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- Firebase Authentication -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <script>
+        // Firebase initialization
+        const firebaseConfig = {
+            apiKey: "AIzaSyDtnGccSZ0-tFgPVwD9jmJBJ4PpkDQD7Bs",
+            authDomain: "social-stories-generator.firebaseapp.com",
+            projectId: "social-stories-generator",
+            storageBucket: "social-stories-generator.appspot.com",
+            messagingSenderId: "754080654068",
+            appId: "1:754080654068:web:5651ac2eea8687d948b4a1",
+            measurementId: "G-4ML4PRDBMB"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        // Email/Password Login Function
+        function login() {
+            var email = document.getElementById("email-id").value;
+            var password = document.getElementById("pwd").value;
+
+            firebase.auth().signInWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+                    // Redirect to index.html after successful login
+                    window.location.href = "index.html";
+                })
+                .catch((error) => {
+                    var errorMessage = error.message;
+                    alert("Error: " + errorMessage);
+                });
+        }
+
+        // Google Login Function
+        function googleLogin() {
+            var provider = new firebase.auth.GoogleAuthProvider();
+
+            firebase.auth().signInWithPopup(provider)
+                .then((result) => {
+                    // Google Access Token and User info
+                    var token = result.credential.accessToken;
+                    var user = result.user;
+                    window.location.href = "index.html";
+                })
+                .catch((error) => {
+                    var errorMessage = error.message;
+                    alert("Error: " + errorMessage);
+                });
+        }
+    </script>
+</body>
+
+</html>
