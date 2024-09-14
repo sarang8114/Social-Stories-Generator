@@ -1,3 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: rgb(36, 36, 36);
+}
+
 .logo {
     width: 60px;
     height: 55px;
@@ -13,21 +30,98 @@
     margin: 0 10px 0 10px;
 }
 
-#navbar {
-    background-color: rgb(36, 0, 100);
-}
-
-#navbar nav {
+#nav {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(36, 36, 36);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 130px;
+    gap: 50px;
+    position: fixed;
+}
+#nav img{
+    height: 60px;
+    border-radius: 20px;
+}
+#nav h4 {
+    font-weight: 650;
+    font-size: 25px;
 }
 
-#navbar nav p {
-    margin-left: 12px;
-    font-size: large;
+#main {
+    position: relative;
+}
+
+#main-content {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#main-content h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+#prompt {
+    background-color: rgb(61, 61, 61);
+    color: rgb(255, 255, 255);
+    height: 50px;
+    width: 50%;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
+
+#prompt input {
+    height: 50px;
+    width: 85%;
+    background-color: rgb(61, 61, 61);
     color: white;
+    text-align: start;
+    font-size: 15px;
+    font-weight: 300;
+    margin: 0;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+input::placeholder {
+    color: white;
+    opacity: 1;
 }
 
-#navbar-logo {
-    margin: 5px 1px 5px 10px;
+#img1, #img2 {
+    height: 25px;
+}
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#footer p {
+    font-size: 12px;
+    font-weight: 30;
+    text-align: center;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
 }

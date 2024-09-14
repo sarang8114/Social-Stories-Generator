@@ -5,14 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StoryGPT</title>
     <link rel="stylesheet" href="../assets/CSS/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-   <section id="navbar">
-    <nav>
-        <img src="../img/social-story-kid.png" alt="Web App Logo" class="logo" id="navbar-logo">
-        <p>StoryGPT</p>
-    </nav>
-   </section>
+   <div id="nav">
+    <img src="../img/social-story-kid.png" alt="Web App Logo">
+    <h4>StoryGPT</h4>
+   </div>
+   <div id="main">
+    <div id="main-content">
+        <h2>What can I help with?</h2>
+        <div id="prompt">
+            <button onclick="attachment()" id="btn-attchment">
+                <img id="img1" src="../img/attachment.png" alt="attachment">
+            </button>
+            <input placeholder="Message StoryGPT" type="text">
+            <button onclick="upload()" id="btn-upload">
+                <img id="img2" src="../img/upload.png" alt="upload">
+            </button>
+        </div>
+    </div>
+   </div>
+   <div id="footer">
+    <p>StoryGPT can make mistakes. Check important info.</p>
+   </div>
 
+   <script>
+    function attachment() {
+        console.log("Attachment button clicked")
+    }
+    function upload() {
+        console.log("Upload button clicked")
+    }
+    </script>
 </body>
 </html>
