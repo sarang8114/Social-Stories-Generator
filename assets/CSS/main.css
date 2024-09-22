@@ -31,23 +31,23 @@ body {
 }
 
 #nav {
-    height: 100px;
+    height: 55px;
     width: 100%;
     background-color: rgb(36, 36, 36);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0 130px;
-    gap: 50px;
+    gap: 40px;
     position: fixed;
 }
 #nav img{
-    height: 60px;
+    height: 30px;
     border-radius: 20px;
 }
 #nav h4 {
-    font-weight: 650;
-    font-size: 25px;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 #main {
@@ -68,7 +68,7 @@ body {
 #main-content h2 {
     font-size: 30px;
     font-weight: 500;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 #prompt {
@@ -102,7 +102,21 @@ input::placeholder {
     opacity: 1;
 }
 
-#img1, #img2 {
+#btn-upload {
+    display: flex;
+    height: 32px;
+    width: 32px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: white;
+    color: black;
+    transition: opacity 0.2s ease;
+}
+#btn-upload:hover {
+    opacity: 0.7;
+}
+#img1 {
     height: 25px;
 }
 
